@@ -124,6 +124,18 @@ a {
 	line-height: calc(16 / 15);
 	letter-spacing: 0.02em;
 	color: var(--header-text-color);
+	position: relative;
+}
+
+.current::after {
+	content: "";
+	height: 4px;
+	width: 100%;
+	background-color: var(--hover-link-color);
+	border-radius: 2px;
+	display: block;
+	position: absolute;
+	bottom: -34px;
 }
 
 .header-link-mail {
@@ -149,16 +161,19 @@ a {
 .header-link:hover,
 .header-link:focus {
 	color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-tel:hover,
 .header-link-tel:focus {
 	color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-mail:hover,
 .header-link-mail:focus {
 	color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-address {
@@ -213,6 +228,7 @@ a {
 
 .hero-btn:hover {
 	background-color: var(--hero-btn-hover);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------BENEFITS------------ */
@@ -288,6 +304,34 @@ a {
 	justify-content: center;
 	margin-bottom: 50px;
 	text-align: center;
+}
+
+.work-window {
+	position: relative;
+	overflow: hidden;
+}
+
+.work-window-text {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--first-title-color);
+	background-color: rgba(47, 48, 58, 0.8);
+	width: 100%;
+	height: 70px;
+	padding-top: 27px;
+
+	position: absolute;
+	bottom: 0;
+	transform: translateY(100%);
+}
+
+.work-item:hover .work-window-text {
+	transform: translateY(0);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------TEAM------------ */
@@ -382,6 +426,7 @@ a {
 .team-icon-link:focus {
 	background-color: var(--hover-link-color);
 	color: var(--first-title-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------OUR-CLIENTS------------ */
@@ -419,12 +464,14 @@ a {
 	justify-content: center;
 	align-items: center;
 	fill: var(--icon-static-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients-link:hover,
 .our-clients-link:focus {
 	border-color: var(--hover-link-color);
 	fill: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------FOOTER------------ */
@@ -473,16 +520,19 @@ a {
 .footer-link-address:hover,
 .footer-link-address:focus {
 	color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-tel:hover,
 .footer-link-tel:focus {
 	color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-mail:hover,
 .footer-link-mail:focus {
 	color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address-container {
@@ -532,6 +582,7 @@ a {
 .footer-icon-link:hover,
 .footer-icon-link:focus {
 	background-color: var(--hover-link-color);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon {
@@ -574,6 +625,7 @@ a {
 	background-color: #2196f3;
 	color: var(--hero-btn-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------EXAMPLES------------ */
@@ -602,6 +654,7 @@ a {
 .examples-hover:hover,
 .examples-hover:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .examples-text {
@@ -628,4 +681,72 @@ a {
 	line-height: 1.87;
 	letter-spacing: 0.03em;
 	color: var(--address-text-color);
+}
+
+.examples-window {
+	position: relative;
+	overflow: hidden;
+}
+
+.examples-top-text {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.03em;
+	color: var(--first-title-color);
+	background-color: rgba(33, 150, 243, 0.9);
+	padding: 63px 24px;
+
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.examples-item:hover .examples-top-text {
+	transform: translateY(0);
+}
+
+/* -----------MODAL------------ */
+
+.backdrop {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.2);
+	top: 0;
+}
+
+.modal {
+	position: absolute;
+	width: 528px;
+	min-height: 581px;
+	background-color: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.close-modal-btn {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	background-color: var(--first-title-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
 }

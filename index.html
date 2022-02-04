@@ -21,7 +21,7 @@
       <a class="link-logo" href="./index.html" target="_self">Web<span target="_self" href="./index.html" class="link-logo-dark">Studio</span></a>
         <ul class="header-list list">
           <li class="header-item">
-            <a class="header-link" href="./index.html">Студия</a>
+            <a class="header-link current" href="./index.html">Студия</a>
           </li>
           <li class="header-item">
             <a class="header-link" href="./portfolio.html">Портфолио</a>
@@ -55,7 +55,7 @@
     <section class="hero">
       <div class="container">
     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-    <button class="hero-btn" type="button">Заказать услугу</button>
+    <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
       </div>
     </section>
 
@@ -108,13 +108,22 @@
       <h2 class="work-title">Чем мы занимаемся</h2>
         <ul class="work-list list">
           <li class="work-item">
+            <div class="work-window">
             <img class="work-img" src="./images/img.jpg" alt="Человек пишет код" width="370" height="294">
+            <p class="work-window-text">Десктопные приложения</p>
+            </div>
           </li>
           <li class="work-item">
+            <div class="work-window">
             <img class="work-img" src="./images/box-2.jpg" alt="Человек смотрит на макет" width="370" height="294">
+            <p class="work-window-text">Мобильные приложения</p>
+            </div>
           </li>
           <li class="work-item">
+            <div class="work-window">
             <img class="work-img" src="./images/box-3.jpg" alt="Человек смотрит на RGB-палитру" width="370" height="294">
+            <p class="work-window-text">Дизайнерские решения</p>
+            </div>
           </li>
         </ul>
         </div>
@@ -400,5 +409,15 @@
           </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-modal-btn" data-modal-close>
+          <svg class="close-button-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-close-modal" class="modal-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
 </body>
 </html>
