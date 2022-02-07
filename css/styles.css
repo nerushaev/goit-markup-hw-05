@@ -125,6 +125,7 @@ a {
 	letter-spacing: 0.02em;
 	color: var(--header-text-color);
 	position: relative;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current::after {
@@ -146,6 +147,7 @@ a {
 	color: var(--address-text-color);
 	display: flex;
 	align-items: center;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-tel {
@@ -156,24 +158,22 @@ a {
 	color: var(--address-text-color);
 	display: flex;
 	align-items: center;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
 .header-link:focus {
 	color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-tel:hover,
 .header-link-tel:focus {
 	color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-mail:hover,
 .header-link-mail:focus {
 	color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-address {
@@ -219,16 +219,15 @@ a {
 	color: var(--hero-btn-color);
 	background-color: var(--hover-link-color);
 	margin-top: 30px;
-
 	width: 200px;
 	height: 50px;
 	left: 700px;
 	top: 430px;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover {
 	background-color: var(--hero-btn-hover);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------BENEFITS------------ */
@@ -327,11 +326,11 @@ a {
 	position: absolute;
 	bottom: 0;
 	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-item:hover .work-window-text {
 	transform: translateY(0);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------TEAM------------ */
@@ -416,6 +415,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -426,7 +426,6 @@ a {
 .team-icon-link:focus {
 	background-color: var(--hover-link-color);
 	color: var(--first-title-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------OUR-CLIENTS------------ */
@@ -464,14 +463,14 @@ a {
 	justify-content: center;
 	align-items: center;
 	fill: var(--icon-static-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients-link:hover,
 .our-clients-link:focus {
 	border-color: var(--hover-link-color);
 	fill: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------FOOTER------------ */
@@ -499,6 +498,7 @@ a {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: var(--first-title-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-mail {
@@ -507,6 +507,7 @@ a {
 	line-height: calc(16 / 14);
 	letter-spacing: 0.02em;
 	color: var(--address-text-color);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-tel {
@@ -515,24 +516,22 @@ a {
 	line-height: calc(16 / 14);
 	letter-spacing: 0.02em;
 	color: var(--address-text-color);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-address:hover,
 .footer-link-address:focus {
 	color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-tel:hover,
 .footer-link-tel:focus {
 	color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-mail:hover,
 .footer-link-mail:focus {
 	color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address-container {
@@ -573,6 +572,7 @@ a {
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: var(--first-title-color);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon-item:not(:last-child) {
@@ -582,7 +582,6 @@ a {
 .footer-icon-link:hover,
 .footer-icon-link:focus {
 	background-color: var(--hover-link-color);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon {
@@ -618,6 +617,10 @@ a {
 
 	background: #f5f4fa;
 	border-radius: 4px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -625,7 +628,6 @@ a {
 	background-color: #2196f3;
 	color: var(--hero-btn-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------EXAMPLES------------ */
@@ -649,12 +651,13 @@ a {
 
 .examples-hover {
 	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .examples-hover:hover,
 .examples-hover:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .examples-text {
@@ -709,6 +712,10 @@ a {
 	transform: translateY(0);
 }
 
+.examples-item:focus .examples-top-text {
+	transform: translateY(0);
+}
+
 /* -----------MODAL------------ */
 
 .backdrop {
@@ -717,6 +724,11 @@ a {
 	position: fixed;
 	background-color: rgba(0, 0, 0, 0.2);
 	top: 0;
+	transition: opacity 500ms, visibility 500ms;
+}
+
+.backdrop.is-hidden .modal {
+	transform: rotate(-300deg) scale(0.3);
 }
 
 .modal {
@@ -728,7 +740,8 @@ a {
 	border-radius: 4px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) rotate(0) scale(1);
+	transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .close-modal-btn {
