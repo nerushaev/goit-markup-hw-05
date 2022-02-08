@@ -136,7 +136,7 @@ a {
 	border-radius: 2px;
 	display: block;
 	position: absolute;
-	bottom: -34px;
+	bottom: -33px;
 }
 
 .header-link-mail {
@@ -311,26 +311,22 @@ a {
 }
 
 .work-window-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	font-weight: 700;
 	font-size: 14px;
 	line-height: calc(16 / 14);
-	text-align: center;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--first-title-color);
 	background-color: rgba(47, 48, 58, 0.8);
 	width: 100%;
 	height: 70px;
-	padding-top: 27px;
 
 	position: absolute;
 	bottom: 0;
-	transform: translateY(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.work-item:hover .work-window-text {
-	transform: translateY(0);
 }
 
 /* -----------TEAM------------ */
@@ -415,7 +411,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -462,15 +458,18 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	fill: var(--icon-static-color);
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	color: var(--icon-static-color);
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-clients-icon {
+	fill: currentColor;
 }
 
 .our-clients-link:hover,
 .our-clients-link:focus {
 	border-color: var(--hover-link-color);
-	fill: var(--hover-link-color);
+	color: var(--hover-link-color);
 }
 
 /* -----------FOOTER------------ */
@@ -618,9 +617,8 @@ a {
 	background: #f5f4fa;
 	border-radius: 4px;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -651,7 +649,6 @@ a {
 
 .examples-hover {
 	display: block;
-
 	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -708,10 +705,7 @@ a {
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.examples-item:hover .examples-top-text {
-	transform: translateY(0);
-}
-
+.examples-item:hover .examples-top-text,
 .examples-item:focus .examples-top-text {
 	transform: translateY(0);
 }
